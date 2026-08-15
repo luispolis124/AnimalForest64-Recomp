@@ -1,0 +1,16 @@
+[input]
+# Endereço de entrada (entrypoint) principal da ROM do jogo na memória
+entrypoint = 0x80000400
+
+# Caminho onde o arquivo .elf mapeado do jogo estará localizado
+elf_path = "animalforest.elf"
+
+# Pasta onde os códigos em C gerados pela recompilação serão salvos
+directory = "output_code"
+
+# Caminho de saída específico para as funções traduzidas
+output_func_path = "output_code/functions"
+
+[options]
+# Configurações de otimização e geração de código nativo
+rom_path = "baserom.z64"

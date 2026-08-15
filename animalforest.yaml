@@ -1,0 +1,22 @@
+name: Animal Forest (Japan)
+options:
+  platform: n64
+  basename: animalforest
+  base_path: "."
+  target_path: baserom.z64
+  asm_path: asm
+  build_path: build
+  symbol_addrs_path: symbol_addrs.txt
+
+segments:
+  - [0x0, header]
+  - name: boot
+    type: code
+    start: 0x00001000
+    vram: 0x80000400
+    subsegments:
+      - [0x1000, asm]
+  - name: boot_data
+    type: data
+    start: 0x00001060
+    vram: 0x80000460
