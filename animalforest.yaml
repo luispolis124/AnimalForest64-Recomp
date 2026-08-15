@@ -1,22 +1,40 @@
-name: Animal Forest (Japan)
+name: Animal Forest (J)
 options:
-  platform: n64
   basename: animalforest
-  base_path: "."
-  target_path: baserom.z64
+  target_path: build/animalforest.z64
+  base_path: .
   asm_path: asm
-  build_path: build
-  symbol_addrs_path: symbol_addrs.txt
+  src_path: src
+  asset_path: assets
+  compiler: IDO
+  platform: n64
 
 segments:
-  - [0x0, header]
+  - name: header
+    type: header
+    start: 0x0
+  
   - name: boot
+    type: bin
+    start: 0x00000040
+    vram: 0x80000400
+  
+  - name: code
     type: code
     start: 0x00001000
     vram: 0x80000400
     subsegments:
-      - [0x1000, asm]
-  - name: boot_data
-    type: data
-    start: 0x00001060
-    vram: 0x80000460
+      - [0x00001000, asm, boot_code]
+      - [0x11F0, asm]
+      - [0x14A0, asm]
+      - [0x1640, asm]
+      - [0x17F0, asm]
+      - [0x00002000, bin]
+
+  # Bloco genérico para abranger o resto dos dados e assets da ROM até 16 MB
+  - name: data
+    type: bin
+    start: 0x00100000
+
+  # Fim exato da ROM de 16 MB (16777216 bytes em decimal)
+  - [0x1000000]
