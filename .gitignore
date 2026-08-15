@@ -1,1 +1,40 @@
+# =========================
+# ROMs e Arquivos Binários
+# =========================
 baserom.z64
+*.z64
+*.n64
+*.v64
+*.bin
+
+# =========================
+# Pastas de Build e Saída
+# =========================
+build/
+asm/
+assets/
+bin/
+obj/
+out/
+target/
+
+# =========================
+# Arquivos Temporários e Logs
+# =========================
+*.log
+*.tmp
+*.cache
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Ambientes Virtuais e IDEs
+# =========================
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+.venv/
+env/
+
