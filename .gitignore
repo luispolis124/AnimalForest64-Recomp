@@ -23,7 +23,6 @@
 *.dll
 *.so.*
 
-
 # Fortran module files
 *.mod
 *.smod
@@ -67,3 +66,15 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# --- ADIÇÕES IMPORTANTES PARA O SEU PROJETO DE RECOMP ---
+# Ignora ROMs de N64 acidentais na pasta raiz (evita problemas de copyright)
+*.z64
+*.n64
+*.v64
+*.rom
+
+# Ignora arquivos gerados durante a extração de assets
+extracted/
+assets/out/
+baserom.*
