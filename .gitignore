@@ -6,6 +6,9 @@ baserom.z64
 *.n64
 *.v64
 *.bin
+*.elf
+*.o
+*.a
 
 # =========================
 # Pastas de Build e Saída
@@ -37,4 +40,3 @@ __pycache__/
 *.pyc
 .venv/
 env/
-
