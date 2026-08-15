@@ -40,5 +40,7 @@ cd AnimalForest64-Recomp
  * Preservation & Modding: Foundation for future mods, translations, and modern hardware enhancements.
 🤝 Contributions
 Contributions are very welcome! If you would like to help improve the code, fix bugs, or add new features, feel free to open an issue or submit a Pull Request.
+
+
 📄 License
 This project is licensed under the MIT License - see the LICENSE file for more details.
