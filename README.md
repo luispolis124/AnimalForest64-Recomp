@@ -1,4 +1,4 @@
-AnimalForest64-Recomp
+# AnimalForest64-Recomp
 A native PC recompilation project for the classic N64 game Animal Forest (Dōbutsu no Mori).
 
 This project utilizes Splat and recompilation tools to allow the game to run natively on modern hardware, providing better performance and support for higher resolutions.
