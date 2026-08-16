@@ -9,14 +9,18 @@ baserom.z64
 *.wad
 
 # =========================
-# Saídas do Recompiler e Binários
+# Saídas do Recompiler, Objetos e Binários
 # =========================
-# Manter comentados se você quiser rastrear seus próprios binários gerados
-# mas ignorar as ROMs originais.
 *.elf
 *.o
+*.obj
 *.a
+*.lib
 *.bin
+*.exe
+*.dll
+*.so
+*.dylib
 
 # =========================
 # Pastas de Build e Configuração (Não versionar)
