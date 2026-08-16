@@ -1,66 +1,37 @@
-<<<<<<< Updated upstream
 # =========================
-# ROMs e Arquivos Binários
+# PROTEÇÃO DE COPYRIGHT (Não versionar ROMs)
 # =========================
 baserom.z64
 *.z64
 *.n64
 *.v64
-*.bin
+*.iso
+*.wad
+
+# =========================
+# Saídas do Recompiler e Binários
+# =========================
+# Manter comentados se você quiser rastrear seus próprios binários gerados
+# mas ignorar as ROMs originais.
 *.elf
 *.o
 *.a
-
-# =========================
-# Pastas de Build e Saída
-# =========================
-build/
-asm/
-assets/
-bin/
-obj/
-out/
-target/
-
-# =========================
-# Arquivos Temporários e Logs
-# =========================
-*.log
-*.tmp
-*.cache
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# =========================
-# Ambientes Virtuais e IDEs
-# =========================
-.vscode/
-.idea/
-__pycache__/
-*.pyc
-.venv/
-env/
-=======
-# =========================
-# ROMs e Arquivos Binários
-# =========================
-baserom.z64
-*.z64
-*.n64
-*.v64
 *.bin
 
 # =========================
-# Pastas de Build e Saída
+# Pastas de Build e Configuração (Não versionar)
 # =========================
 build/
-asm/
-assets/
+build_cmake/
 bin/
 obj/
 out/
 target/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+Makefile
 
 # =========================
 # Arquivos Temporários e Logs
@@ -73,7 +44,7 @@ Thumbs.db
 desktop.ini
 
 # =========================
-# Ambientes Virtuais e IDEs
+# Ambientes Virtuais, IDEs e Submódulos
 # =========================
 .vscode/
 .idea/
@@ -81,4 +52,8 @@ __pycache__/
 *.pyc
 .venv/
 env/
->>>>>>> Stashed changes
+# Submódulos não devem ser rastreados como arquivos normais
+lib/rt64/
+lib/lunasvg/
+lib/RmlUi/
+lib/N64ModernRuntime/
