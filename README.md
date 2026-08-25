@@ -4,6 +4,22 @@ An experimental native static recompilation project for the classic N64 game **A
 
 This project transforms the original MIPS assembly code into native high-performance binaries, enabling enhanced framerates, modern rendering features, widescreen support, and high-performance native execution.
 
+---
+
+## 📊 Project Status
+
+🟡 **In Development**
+
+* ✅ Initial architecture setup
+* ✅ MIPS assembly extraction
+* ✅ Splat configuration
+* 🟡 Build pipeline stabilization
+* 🔧 N64Recomp integration
+* 🔧 Runtime & RT64 backend
+* 🔧 Native PC compilation
+
+---
+
 ⚠️ **Legal Disclaimer**
 This project does **NOT** include the game ROM. To compile and run this project, you must possess a legal copy of the original *Dōbutsu no Mori* (N64) ROM (`baserom.z64`). This repository provides only the configuration files, scripts, and build structures necessary to perform the recompilation process.
 
