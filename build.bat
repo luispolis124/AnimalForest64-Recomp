@@ -1,28 +1,39 @@
 @echo off
 setlocal
 
-echo [Build System] Iniciando a compilacao do Animal Forest Recompiled (.exe)...
+echo [Build System] Iniciando a configuracao e compilacao do Animal Forest Recompiled via CMake...
 
-:: Define o compilador MinGW para arquitetura de 64-bits
-set CC=x86_64-w64-mingw32-gcc
+:: Cria e entra no diretorio de build padrão
+if not exist build mkdir build
+cd build
 
-:: Flags de otimizacao e inclusao de bibliotecas graficas e do SDL2
-set CFLAGS=-O3 -Wall -mwindows
-set LIBS=-lmingw32 -lSDL2main -lSDL2 -lopengl32 -lm
+:: Configura o projeto com CMake para 64-bits (Visual Studio ou MinGW padrão do sistema)
+cmake .. -DCMAKE_BUILD_TYPE=Release
 
-:: Arquivos fontes do projeto (Main + Código Recompilado + Camada de Runtime)
-set SOURCES=main.c src/recompiled_game.c src/n64_runtime.c src/graphics_rdp.c
-
-:: Executa a compilacao para gerar o executavel nativo do Windows
-%CC% %SOURCES% -o AnimalForest.exe %CFLAGS% %LIBS%
-
-if %ERRORLEVEL% EQU 0 (
+if %ERRORLEVEL% NEQ 0 (
     echo.
-    echo [Sucesso!] O executavel AnimalForest.exe foi gerado com exito!
-) else (
-    echo.
-    echo [Erro] Falha durante o processo de compilacao.
+    echo [Erro] Falha na configuracao do CMake.
+    goto error
 )
 
+:: Compila o projeto utilizando todos os núcleos disponíveis
+cmake --build . --config Release
+
+if %ERRORLEVEL% NEQ 0 (
+    echo.
+    echo [Erro] Falha durante o processo de compilacao.
+    goto error
+)
+
+echo.
+echo [Sucesso!] O projeto foi recompilado e compilado com exito na pasta build!
+goto end
+
+:error
+echo.
+echo [Falha] O processo de build foi interrompido devido a erros.
+
+:end
+cd ..
 endlocal
 pause
