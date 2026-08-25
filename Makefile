@@ -1,6 +1,6 @@
 # Makefile para AnimalForest64 - Versão Nativa Linux / Termux
 
-BUILD_DIR = build_cmake
+BUILD_DIR = build
 PYTHON = python3
 SPLAT = splat/split.py
 CONFIG = animalforest.yaml
