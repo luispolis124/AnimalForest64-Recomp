@@ -1,7 +1,7 @@
 # Config file for recompiling Animal Forest (Doubutsu no Mori) N64.
 
 [input]
-elf_path = "/data/data/com.termux/files/home/AnimalForest64/animalforest.elf"
+elf_path = "animalforest.elf"
 output_func_path = "output_code/functions"
 single_file_output = false
 use_absolute_symbols = false
@@ -12,4 +12,4 @@ allow_exports = true
 strict_patch_mode = false
 
 [options]
-rom_path = "/data/data/com.termux/files/home/AnimalForest64/baserom.z64"
+rom_path = "baserom.z64"
