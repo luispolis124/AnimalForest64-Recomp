@@ -9,6 +9,14 @@ baserom.z64
 *.wad
 
 # =========================
+# Arquivos Compactados (ZIP e afins)
+# =========================
+*.zip
+*.rar
+*.7z
+*.tar.gz
+
+# =========================
 # Saídas do Recompiler, Objetos e Binários
 # =========================
 *.elf
