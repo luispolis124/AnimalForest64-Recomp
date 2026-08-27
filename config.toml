@@ -1,4 +1,6 @@
+# =====================================================================
 # Config file for recompiling Animal Forest (Doubutsu no Mori) N64.
+# =====================================================================
 
 [input]
 elf_path = "animalforest.elf"
@@ -13,3 +15,29 @@ strict_patch_mode = false
 
 [options]
 rom_path = "baserom.z64"
+
+# =====================================================================
+# Definição de Segmentos e Endereços de Memória (Exemplo Base)
+# =====================================================================
+# O N64Recomp precisa saber onde o código começa e termina na RAM do console.
+# Estes endereços mapeiam o ponto de entrada (Entrypoint) e o cabeçalho.
+
+[rom]
+# Endereço virtual inicial (geralmente 0x80000400 para o cabeçalho/boot do N64)
+entry_point = 0x80000400
+
+# Seção de Código Principal (Text Segment)
+# Ajustado de acordo com o layout de memória padrão do zeldaret/af
+[[segments]]
+name = "boot"
+vram = 0x80000400
+rom_start = 0x00001000
+rom_end = 0x00002000
+type = "code"
+
+[[segments]]
+name = "main"
+vram = 0x80000440
+rom_start = 0x00002000
+rom_end = 0x00100000  # Será expandido conforme o tamanho real do ELF/binário
+type = "code"
